@@ -1,16 +1,16 @@
+var p
 function getPokemon() {
-    var p = document.getElementById("choix").value; 
-console.log(p);
+    p = document.getElementById("choix").value  
+    return p;
 }   
-fetch('https://pokeapi.co/api/v2/pokemon/')
-.then(reponse => reponse.json())
+fetch("https://pokeapi.co/api/v2/pokemon")
+.then(response => response.json())
 .then (json => {
-    let ul = document.querySelector('#pokemons');
+    let ul = document.querySelector('#pokemons')
     json.results.forEach(pokemon => {
-        let li = document.createElement('li')
-        let txt = document.createTextNode(pokemon.name)
-        li.appendChild
-        ul.appendChild(li)
+    let li = document.createElement('li')
+    let txt = document.createTextNode(pokemon.name)
+    li.appendChild(txt)
+    ul.appendChild(li)
     })
-})
-
+    })

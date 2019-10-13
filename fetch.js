@@ -14,7 +14,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/')
 
     })
     })
-})
 
 function fillPokemonDetail(pokemon) {
     return fetch(pokemon.url)

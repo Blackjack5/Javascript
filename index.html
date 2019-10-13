@@ -8,11 +8,14 @@
   <link rel="stylesheet" href="TEST.css">
 </head>
 <body>
-    <div id="Title"></div>
-    <div id="completed"></div>
-  <h1>TEST API JAVASCRIPT</h1>
-  <div data-photos>
+  <div class="navbar">
+    <input id="choix" class="sr" type="text" placeholder="Entrez un Pokemon">
+    <input type="submit" value="Envoyer" onclick="getPokemon();">
     <script src='fetch.js'></script>
+  </div>
+  <div>
+    <ul id="pokemons">
+    </ul>
   </div>
 </body>
 </html> 

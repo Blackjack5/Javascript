@@ -18,3 +18,11 @@
     height: 20px;
     width: 200px;
 }
+#pokemons {
+    list-style-type: none;
+    display:inline-block;
+}
+
+li {
+    color: orange;
+}

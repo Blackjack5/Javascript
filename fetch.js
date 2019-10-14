@@ -1,16 +1,12 @@
-var p
+var url = "https://pokeapi.co/api/v2/";
 function getPokemon() {
-    p = document.getElementById("choix").value  
+    p = document.getElementById("choix").value;
+    getPokemon1(p); 
+} 
+function getPokemon1(p) {
     return p;
-}   
-fetch("https://pokeapi.co/api/v2/pokemon")
+}
+fetch(url + "pokemon/"+ "butterfree")
 .then(response => response.json())
-.then (json => {
-    let ul = document.querySelector('#pokemons')
-    json.results.forEach(pokemon => {
-    let li = document.createElement('li')
-    let txt = document.createTextNode(pokemon.name)
-    li.appendChild(txt)
-    ul.appendChild(li)
-    })
-    })
+.then(response => console.log(JSON.stringify(response)))
+.catch(error => alert("Erreur : Oups un problème est survenu avec notre API"))
